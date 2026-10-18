@@ -23,22 +23,22 @@ export async function seed() {
   try {
     const octocats = await Team.findOneAndUpdate(
       { name: 'Octocats' },
-      { $set: { name: 'Octocats', mascot: 'Mona', members: [] } },
+      { $set: { name: 'Octocats', mascot: 'Mona' } },
       { upsert: true, new: true, setDefaultsOnInsert: true },
     );
     const robocats = await Team.findOneAndUpdate(
       { name: 'Robocats' },
-      { $set: { name: 'Robocats', mascot: 'Hubot', members: [] } },
+      { $set: { name: 'Robocats', mascot: 'Hubot' } },
       { upsert: true, new: true, setDefaultsOnInsert: true },
     );
     const coders = await Team.findOneAndUpdate(
       { name: 'Coders' },
-      { $set: { name: 'Coders', mascot: 'Byte', members: [] } },
+      { $set: { name: 'Coders', mascot: 'Byte' } },
       { upsert: true, new: true, setDefaultsOnInsert: true },
     );
     const cyclists = await Team.findOneAndUpdate(
       { name: 'Cyclists' },
-      { $set: { name: 'Cyclists', mascot: 'Spin', members: [] } },
+      { $set: { name: 'Cyclists', mascot: 'Spin' } },
       { upsert: true, new: true, setDefaultsOnInsert: true },
     );
 
